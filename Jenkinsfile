@@ -3,14 +3,14 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID="158106796706"
         AWS_DEFAULT_REGION="us-east-1" 
-	CLUSTER_NAME="demo"
-	SERVICE_NAME="demo"
-	TASK_DEFINITION_NAME="demo-task"
-	DESIRED_COUNT="1"
+        CLUSTER_NAME="demo"
+        SERVICE_NAME="demo"
+        TASK_DEFINITION_NAME="demo-task"
+        DESIRED_COUNT="1"
         IMAGE_REPO_NAME="demo"
         IMAGE_TAG="${env.BUILD_ID}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
-	registryCredential = "demo-admin-user"
+	      registryCredential = "demo-admin-user"
     }
    
     stages {
